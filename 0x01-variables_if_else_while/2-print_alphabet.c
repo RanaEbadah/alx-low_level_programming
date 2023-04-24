@@ -5,13 +5,11 @@
 */
 int main(void)
 {
-	char alphas[28];
-	int i;
+	char i;
 
-	for (i = 0; i < 28; i++)
+	for (i = 'a'; i <= 'z'; i++)
 	{
-		alphas[i] = 'a' + i;
-		putchar(alphas[i]);
+		putchar(i);
 	}
 	return (0);
 }
