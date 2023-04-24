@@ -5,7 +5,7 @@
 */
 int main(void)
 {
-	char alphas[27];
+	char alphas[28];
 	int i;
 
 	for (i = 0; i < 28; i++)
