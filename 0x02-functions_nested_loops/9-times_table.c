@@ -32,6 +32,10 @@ void times_table(void)
 		for (j = 0; j < 10 ; j++)
 		{
 			result = i * j;
+			if (j != 0 && result < 10)
+			{
+				_putchar(' ');
+			}
 			print(result);
 			if (j != 9)
 			{
