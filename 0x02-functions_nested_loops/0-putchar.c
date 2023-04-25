@@ -7,12 +7,11 @@
 int main(void)
 {
 	char arr[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
-	int j = 0;
 
 	for (int i = 0; i <= 7; i++)
 	{
-		j = _putchar(i);
+		_putchar(i);
 	}
-	j = _putchar('\n');
+	_putchar('\n');
 	return (0);
 }
