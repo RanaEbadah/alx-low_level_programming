@@ -1,1 +1,1 @@
-This is my READ ME file
+0x03. C - Debugging - implementation of manual debugging
