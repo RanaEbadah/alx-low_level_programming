@@ -11,7 +11,6 @@ void print_diagonal(int n)
 {
 	int row, column, count;
 
-	count = 0;
 	if (n <= 0)
 	{
 		_putchar('\n');
@@ -20,6 +19,8 @@ void print_diagonal(int n)
 	{
 		for (row = n; row >= 1; row--)
 		{
+			count = 0;
+
 			for (column = 0; column < n; column++)
 			{
 				count = column + row;
