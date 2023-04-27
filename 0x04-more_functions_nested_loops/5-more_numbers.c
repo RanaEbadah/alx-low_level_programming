@@ -20,8 +20,12 @@ void more_numbers(void)
 				_putchar('1');
 			}
 			_putchar((i % 10) + 48);
+
+			if (i == 14)
+			{
+				_putchar('\n');
+			}
 		}
 
-		_putchar('\n');
 	}
 }
