@@ -9,7 +9,7 @@
 
 void print_diagonal(int n)
 {
-	int row, column, count;
+	int row, column;
 
 	if (n <= 0)
 	{
@@ -17,23 +17,15 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (row = n; row >= 1; row--)
+		for (row = 1; row <= n; row++)
 		{
-			count = 0;
 
-			for (column = 0; column < n; column++)
+			for (column = 1; column <= row; column++)
 			{
-				count = column + row;
-				if (count == n)
-				{
-					_putchar(92);
-				}
-				else
-				{
-					_putchar(' ');
-				}
+				_putchar(' ');
 
 			}
+			_putchar(92);
 			_putchar('\n');
 		}
 
