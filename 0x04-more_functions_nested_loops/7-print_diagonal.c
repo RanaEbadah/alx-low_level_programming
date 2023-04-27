@@ -26,7 +26,7 @@ void print_diagonal(int n)
 				count = column + row;
 				if (count == n)
 				{
-					_putchar('\\');
+					_putchar(92);
 				}
 				else
 				{
