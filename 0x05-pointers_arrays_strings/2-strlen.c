@@ -9,9 +9,11 @@ int _strlen(char *s)
 {
 	int i = 0;
 	int length = 0;
-	char arr[] = *s;
+	char *arr;
 
-	while (s[i])
+	arr = s;
+
+	while (arr[i])
 	{
 		length++;
 		i++;
