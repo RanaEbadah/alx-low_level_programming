@@ -16,7 +16,7 @@ void rev_string(char *s)
 	{
 		i++;
 	}
-	printf("%d\n", i);
+	
 
 	for (j = i; j >= 0; j++)
 	{
@@ -24,7 +24,4 @@ void rev_string(char *s)
 
 	}
 	_putchar('\n');
-
-
-
 }
