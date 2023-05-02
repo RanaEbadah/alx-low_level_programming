@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stdio.h>
 /**
  *rev_string - revesre a string.
  *@s: a pointer to string.
@@ -8,22 +9,29 @@
 void rev_string(char *s)
 {
 	int i = 0;
-	char *arr;
-	int j;
+	int counter;
+	char temp;
 
-	arr = s;
-	while (arr[i])
+
+	while (s[i])
 	{
 		i++;
 	}
+	 counter = i;
 
-	if (i > 0)
+	
+	if (counter > 0)
 	{
-		for (j = i - 1; j >= 0; j--)
+		for (i = 0; i < counter / 2; i++)
 		{
-			_putchar(arr[j]);
+			temp = s[i];
+			s[i] = s[counter - 1 - i];
+			s[counter - 1 - i] = temp;
 		}
+
+
 	}
-	_putchar('\n');
+
+
 
 }
