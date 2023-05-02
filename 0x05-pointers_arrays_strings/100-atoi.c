@@ -9,6 +9,7 @@ int _atoi(char *s)
 {
 	int length = 0;
 	int i = 0;
+	int done = 0;
 	int index = 0;
 	int done = 0;
 	int num = 0;
@@ -21,8 +22,10 @@ int _atoi(char *s)
 
 	for (i = 0; i < length; i++)
 	{
+
 		if (s[i] >= 48 && s[i] <= 57)
 		{
+			done = 1;
 			if (done == 0)
 			{
 				index = i;
@@ -30,6 +33,13 @@ int _atoi(char *s)
 			}
 
 			num = num * 10 + (s[i] - 48);
+		}
+		else
+		{
+			if (done == 1)
+			{
+				break;
+			}
 		}
 	}
 
