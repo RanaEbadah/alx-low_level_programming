@@ -8,14 +8,15 @@
 int _atoi(char *s)
 {
 	int length = 0;
-	int i;
+	int i = 0;
 	int index = 0;
 	int done = 0;
 	int num = 0;
 
-	while (char[i])
+	while (s[i])
 	{
 		length++;
+		i++;
 	}
 
 	for (i = 0; i < length; i++)
@@ -41,5 +42,5 @@ int _atoi(char *s)
 
 	}
 
-	Return(num);
+	return (num);
 }
