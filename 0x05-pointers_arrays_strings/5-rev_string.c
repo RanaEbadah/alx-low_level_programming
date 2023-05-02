@@ -9,13 +9,22 @@ void rev_string(char *s)
 {
 	int i = 0;
 	char *arr;
+	int j;
 
 	arr = s;
 	while (arr[i])
 	{
 		i++;
 	}
-
 	printf("%d\n", i);
+
+	for (j = i; j >= 0; j++)
+	{
+		_putchar(arr[j - 1]);
+
+	}
+	_putchar('\n');
+
+
 
 }
