@@ -8,9 +8,8 @@
 int _atoi(char *s)
 {
 	int length = 0;
+	int sign = 1;
 	int i = 0;
-	int index = 0;
-	int done = 0;
 	int num = 0;
 
 	while (s[i])
@@ -21,13 +20,17 @@ int _atoi(char *s)
 
 	for (i = 0; i < length; i++)
 	{
+		if (s[i] == '-')
+		{
+			sign = sign * -1;
+		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (done == 0)
-			{
-				index = i;
-				done = 1;
-			}
+			/*if (done == 0)*/
+			/*{*/
+				/*index = i;*/
+				/*done = 1;*/
+			/*}*/
 
 			num = num * 10 + (s[i] - 48);
 
@@ -37,12 +40,7 @@ int _atoi(char *s)
 			}
 		}
 	}
-	if (done == 1)
-	{
-		if (s[index - 1] == '-')
-		{
-			num = num * -1;
-		}
-	}
+
+	num = num * sign;
 	return (num);
 }
