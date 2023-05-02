@@ -31,21 +31,18 @@ int _atoi(char *s)
 
 			num = num * 10 + (s[i] - 48);
 
-			if(!(s[i +1] >= 48) && !(s[i+1] <= 57))
+			if (!(s[i + 1] >= 48) && !(s[i + 1] <= 57))
 			{
 				break;
 			}
 		}
 	}
-
 	if (done == 1)
 	{
 		if (s[index - 1] == '-')
 		{
 			num = num * -1;
 		}
-
 	}
-
 	return (num);
 }
