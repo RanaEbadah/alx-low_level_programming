@@ -19,7 +19,7 @@ void rev_string(char *s)
 
 	if (i > 0)
 	{
-		for (j = i - 1; j >= 0; j++)
+		for (j = i - 1; j >= 0; j--)
 		{
 			_putchar(arr[j]);
 		}
