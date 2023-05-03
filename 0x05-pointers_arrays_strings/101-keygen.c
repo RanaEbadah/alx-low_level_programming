@@ -19,7 +19,7 @@ int main(void)
 	char C_letter[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&?*-_";
 	int n = 14;
-	char password[n];
+	char password[14];
 
 	srand((unsigned int)(time(NULL)));
 	randomNum = rand() % 4;
