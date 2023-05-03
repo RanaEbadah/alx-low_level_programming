@@ -17,7 +17,7 @@ int main(void)
 	char numbers[] = "0123456789";
 	char s_letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char C_letter[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = {!@#$%^&?*-_};
+	char symbols[] = "!@#$^&?*-_";
 	int n = 14;
 	char password[n];
 
