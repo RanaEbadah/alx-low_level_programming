@@ -20,6 +20,7 @@ char *rot13(char *str)
 			if (str[i] == arr1[j])
 			{
 				str[i] = arr2[j];
+				break;
 			}
 		}
 
