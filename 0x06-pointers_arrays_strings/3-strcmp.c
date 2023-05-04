@@ -25,11 +25,11 @@ int _strcmp(char *s1, char *s2)
 	}
 	if (s1length > s2length)
 	{
-		nInt = 15;
+		nInt = s1length - s2length;
 	}
 	else if (s1length < s2length)
 	{
-		nInt = -15;
+		nInt = s1length - s2length;
 	}
 	else
 	{
@@ -39,7 +39,7 @@ int _strcmp(char *s1, char *s2)
 			continue;
 			else
 			{
-				nInt = -15;
+				nInt = s1[i] - s2[i] ;
 				break;
 			}
 		}
