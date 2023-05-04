@@ -17,7 +17,7 @@ char *leet(char *str)
 		for (j = 0; j < 8; j++)
 		{
 			if ((arr[j] != 0) && ((str[i] == arr[j]) || (str[i] == (arr[j] + 32))))
-			{ 
+			{
 				str[i] = j;
 			}
 		}
