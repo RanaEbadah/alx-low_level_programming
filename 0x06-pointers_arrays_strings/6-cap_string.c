@@ -26,6 +26,11 @@ char *cap_string(char *str)
 						break;
 					}
 				}
+				else
+				{
+					str[i] = str[i] - 32;
+				}
+
 			}
 		}
 		i++;
