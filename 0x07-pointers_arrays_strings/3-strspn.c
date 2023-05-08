@@ -10,32 +10,31 @@
 unsigned int _strspn(char *s, char *accept)
 {
 
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
 	unsigned int count = 0;
-
+ 
+ 	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == 32)
 		{
-			printf("space is here\n");
 			break;
 		}
 
+		j = 0;
 		while (accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
 			{
 				count++;
-				printf("count equal %d\n", count);
-				continue;
+				break;
 			}
 
 			j++;
-			printf("j equal %d\n", j);
-
+			
 		}
-		printf("i equal %d\n", i);
+	
 		i++;
 	}
 
