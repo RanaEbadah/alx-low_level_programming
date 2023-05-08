@@ -13,8 +13,8 @@ unsigned int _strspn(char *s, char *accept)
 	int i;
 	int j;
 	unsigned int count = 0;
- 
- 	i = 0;
+
+	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] == 32)
@@ -32,9 +32,9 @@ unsigned int _strspn(char *s, char *accept)
 			}
 
 			j++;
-			
+
 		}
-	
+
 		i++;
 	}
 
