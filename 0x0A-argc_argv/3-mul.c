@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include "main.h"
+#include<stdlib.h>
+#include <ctype.h>
 /**
 *main - a program that mutiply two numbers
 *@argc: int the number of arguments.
