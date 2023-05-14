@@ -12,7 +12,8 @@
 
 int main(int argc, char *argv[])
 {
-	int coinCount = 0, cents;
+	int coinCount = 0, cents, j;
+	int arr[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
 	{
@@ -27,65 +28,20 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		if ((cents % 25) != cents)
+		for (j = 0; j < 5; j++)
 		{
-			coinCount = coinCount + (cents / 25);
-			if ((cents % 25) == 0)
+			if (cents > 0)
 			{
-				printf("%d\n", coinCount);
-				return (0);
+				while (cents >= arr[j])
+				{
+					coinCount++;
+					cents = cents - arr[j];
+				}
 			}
-			else
-			{
-				cents = coinCount % 25;
-			}
-		}
-		if ((cents % 10) != cents)
-		{
-			coinCount = coinCount + (cents / 10);
-			if ((cents % 10) == 0)
-			{
-				printf("%d\n", coinCount);
-				return (0);
-			}
-			else
-			{
-				cents = coinCount % 10;
-			}
-		}
-		if ((cents % 5) != cents)
-		{
-			coinCount = coinCount + (cents / 5);
-			if ((cents % 5) == 0)
-			{
-				printf("%d\n", coinCount);
-				return (0);
-			}
-			else
-			{
-				cents = coinCount % 5;
 
-			}
 		}
-		if ((cents % 2) != cents)
-		{
-			coinCount = coinCount + (cents / 2);
-			if ((coinCount % 2) == 0)
-			{
-				printf("%d\n", coinCount);
-				return (0);
-			}
-			else
-			{
-				cents = coinCount % 2;
-
-			}
-		}
-
-		if (cents > 0)
-		coinCount = cents + coinCount;
-
-		printf("%d\n", coinCount);
-		return (0);
 	}
+
+	printf("%d\n", coinCount);
+	return (0);
 }
