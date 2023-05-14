@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 int _putchar(char c);
+int atoi(const char *str); 
 
 
 #endif /* MAIN_H */
