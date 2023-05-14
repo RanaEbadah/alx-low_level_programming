@@ -19,14 +19,14 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	if (argv[1] < 0)
+	cents = atoi(argv[1]);
+	if (cents < 0)
 	{
 		printf("0\n");
 		return (1);
 	}
 	else
 	{
-		cents = atoi(argv[1]);
 		if ((cents % 25) != cents)
 		{
 			coinCount = coinCount + (cents / 25);
