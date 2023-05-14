@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include "main.h"
+#include<stdlib.h>
+#include <ctype.h>
 
 /**
 *checkInt - a function to check the int
@@ -44,7 +46,7 @@ int main(int argc, char *argv[])
 
 			if (isInt != 1)
 			{
-				printf("ERROR\n");
+				printf("Error\n");
 				return (1);
 			}
 			else
