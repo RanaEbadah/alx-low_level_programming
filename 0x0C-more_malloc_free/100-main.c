@@ -41,7 +41,7 @@ int main(void)
     char *p;
     int i;
 
-    p = malloc(sizeof(char) * 10);
+    p = malloc(sizeof(char) * 1000);
     p = _realloc(p, sizeof(char) * 1000, sizeof(char) * 1000);
     i = 0;
     while (i < 98)
