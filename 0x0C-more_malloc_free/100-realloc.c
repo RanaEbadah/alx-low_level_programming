@@ -3,6 +3,36 @@
 #include<stdlib.h>
 
 /**
+*assign - assign values to pointer.
+*@newPtr: The new pointer.
+*@ptr: The old pointer.
+*@new_size: The new size
+*@old_size: The old size
+*Return: void
+*
+*/
+
+void assign(void *newPtr, void *ptr,
+unsigned int new_size, unsigned int  old_size)
+{
+	int *a, *b;
+	unsigned int limit, i;
+
+	if (new_size > old_size)
+	limit = old_size;
+	else
+	limit = new_size;
+
+	a = (int *) newPtr;
+	b = (int *) ptr;
+	for (i = 0; i < limit; i++)
+	{
+		a[i] = b[i];
+	}
+
+}
+
+/**
 *_realloc - reallocates a memory block using malloc and free
 *@ptr: The pointer that will reallocate.
 *@old_size: The old size
@@ -14,8 +44,6 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *newPtr;
-	int *a, *b;
-	unsigned int i, limit;
 
 	if (new_size == old_size)
 	return (ptr);
@@ -40,17 +68,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (newPtr == NULL)
 	return (NULL);
 
-	if (new_size > old_size)
-	limit = old_size;
-	else
-	limit = new_size;
-
-	a = (int *) newPtr;
-	b = (int *) ptr;
-	for (i = 0; i < limit; i++)
-	{
-		a[i] = b[i];
-	}
+	assign(newPtr, ptr, new_size, old_size);
 
 	free(ptr);
 
