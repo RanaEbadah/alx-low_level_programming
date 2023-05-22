@@ -1,5 +1,9 @@
+#ifndef FILEPATH__
+#define FILEPATH__  __FILE__
+
+#endif /* FILEPATH__ */
+
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - check the code
@@ -9,6 +13,6 @@
 
  int main(void)
  {
-	printf("%s\n", __FILE__);
+	printf("%s\n", FILEPATH__);
 	return (0);
  }
