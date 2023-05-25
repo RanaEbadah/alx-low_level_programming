@@ -14,12 +14,13 @@ void print_all(const char * const format, ...)
 	char *str;
 	char *separator;
 
+	if (!format)
+	return;
+	
 	separator = "";
 	va_start(args, format);
 	while (format[i])
 	{
-		if (!format)
-		return;
 		switch (format[i])
 		{
 			case 'c':
