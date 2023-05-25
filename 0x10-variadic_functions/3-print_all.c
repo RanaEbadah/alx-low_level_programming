@@ -14,14 +14,12 @@ void print_all(const char * const format, ...)
 	char *str;
 	char *separator;
 
+	separator = "";
 	va_start(args, format);
 	while (format[i])
 	{
-		if (i == 0)
-		separator = "";
-		else
-		separator = ", ";
-		
+		if (!format)
+		return;
 		switch (format[i])
 		{
 			case 'c':
@@ -44,6 +42,7 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
+		separator=", ";
 		i++;
 	}
 	printf("\n");
