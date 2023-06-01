@@ -9,20 +9,15 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t nodesCount = 1;
-	list_t *counterPtr;
+	size_t nodesCount = 0;
 
 	if (h == NULL)
 	return (-1);
 
-	printNode(h);
-
-	counterPtr = h->next;
-
-	while (counterPtr != NULL)
+	while (h != NULL)
 	{
-		printNode(counterPtr);
-		counterPtr = counterPtr->next;
+		printNode(h);
+		h = h->next;
 		nodesCount++;
 	}
 
