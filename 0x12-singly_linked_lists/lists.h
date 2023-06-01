@@ -26,6 +26,7 @@ struct list_s *next;
 
 
 /*functions*/
+void my_constructor();
 int _putchar(char c);
 void printNode(const list_t *node);
 size_t print_list(const list_t *h);
