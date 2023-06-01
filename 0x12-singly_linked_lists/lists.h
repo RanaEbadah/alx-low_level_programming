@@ -21,7 +21,6 @@ typedef struct list_s
 } list_t;
 
 
-
 /*functions*/
 int _putchar(char c);
 void printNode(const list_t *node);
