@@ -12,6 +12,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	int checker;
 	int result;
 
+	if (index > 31)
+	return (-1);
+
 	checker = 1 << index;
 	result = (checker & n) != 0;
 	return (result);
