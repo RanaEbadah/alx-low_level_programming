@@ -2,7 +2,7 @@
 
 
 /**
- * close - close file
+ * closeFiles - close file
  * @fd: file participate number
  * Return: void
  */
