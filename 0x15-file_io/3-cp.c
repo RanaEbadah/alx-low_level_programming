@@ -72,7 +72,7 @@ int main(int argc, char *argv[])
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
-			exit(98);
+			exit(99);
 		}
 		readed = read(fromFd, buffer, BUF_SIZE);
 		toFd = open(argv[2], O_WRONLY | O_APPEND);
